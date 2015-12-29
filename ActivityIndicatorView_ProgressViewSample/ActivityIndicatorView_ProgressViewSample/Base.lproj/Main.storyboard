@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ActivityIndicatorView_ProgressViewSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ntP-dH-RwT">
+                                <rect key="frame" x="290" y="89" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="hgW-5g-ZET">
+                                <rect key="frame" x="225" y="263" width="150" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="8by-eQ-ji8"/>
+                                </constraints>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mr7-Pi-n1w">
+                                <rect key="frame" x="266" y="296" width="69" height="30"/>
+                                <state key="normal" title="Download"/>
+                                <connections>
+                                    <action selector="download:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H6e-X2-a41"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdU-3d-ty2">
+                                <rect key="frame" x="275" y="147" width="50" height="30"/>
+                                <state key="normal" title="Upload"/>
+                                <connections>
+                                    <action selector="upload:" destination="BYZ-38-t0r" eventType="touchUpInside" id="j8t-Lp-gLg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JdU-3d-ty2" firstAttribute="centerX" secondItem="ntP-dH-RwT" secondAttribute="centerX" id="4Jz-Yb-sU8"/>
+                            <constraint firstItem="mr7-Pi-n1w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C3g-kE-Drs"/>
+                            <constraint firstItem="mr7-Pi-n1w" firstAttribute="centerX" secondItem="hgW-5g-ZET" secondAttribute="centerX" id="K1Q-Xy-j4a"/>
+                            <constraint firstItem="mr7-Pi-n1w" firstAttribute="top" secondItem="hgW-5g-ZET" secondAttribute="bottom" constant="31" id="OmR-9U-24H"/>
+                            <constraint firstItem="hgW-5g-ZET" firstAttribute="top" secondItem="JdU-3d-ty2" secondAttribute="bottom" constant="86" id="aDB-oF-UcF"/>
+                            <constraint firstItem="JdU-3d-ty2" firstAttribute="top" secondItem="ntP-dH-RwT" secondAttribute="bottom" constant="38" id="nS0-5I-9Rr"/>
+                            <constraint firstItem="ntP-dH-RwT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="69" id="p2A-DX-jlt"/>
+                            <constraint firstItem="JdU-3d-ty2" firstAttribute="centerX" secondItem="hgW-5g-ZET" secondAttribute="centerX" id="s3G-1Z-slp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="ntP-dH-RwT" id="qEL-MA-Ibu"/>
+                        <outlet property="progress" destination="hgW-5g-ZET" id="9Zl-Zo-tsK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

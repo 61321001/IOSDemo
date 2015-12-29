@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextField_TextViewSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FOL-ho-Rf6">
+                                <rect key="frame" x="20" y="76" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="yuO-8S-Cx2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VfS-NM-mXB">
+                                <rect key="frame" x="20" y="105" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wiO-VD-YCU"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Abstract" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLV-KW-DWM">
+                                <rect key="frame" x="20" y="174" width="560" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="4kJ-Q2-GW9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3mn-KH-cQ9">
+                                <rect key="frame" x="20" y="203" width="560" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ewQ-7E-Wga"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3mn-KH-cQ9" firstAttribute="top" secondItem="MLV-KW-DWM" secondAttribute="bottom" constant="8" symbolic="YES" id="8HA-Dd-UTP"/>
+                            <constraint firstItem="VfS-NM-mXB" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="CWg-Ft-xv7"/>
+                            <constraint firstItem="MLV-KW-DWM" firstAttribute="trailing" secondItem="VfS-NM-mXB" secondAttribute="trailing" id="Ebz-4s-vAk"/>
+                            <constraint firstItem="VfS-NM-mXB" firstAttribute="leading" secondItem="FOL-ho-Rf6" secondAttribute="leading" id="Lb6-NQ-kBQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3mn-KH-cQ9" secondAttribute="bottom" constant="269" id="Psd-gN-9mn"/>
+                            <constraint firstItem="VfS-NM-mXB" firstAttribute="top" secondItem="FOL-ho-Rf6" secondAttribute="bottom" constant="8" symbolic="YES" id="UHP-fw-XfD"/>
+                            <constraint firstItem="FOL-ho-Rf6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="56" id="b24-Ca-Bhm"/>
+                            <constraint firstItem="MLV-KW-DWM" firstAttribute="top" secondItem="VfS-NM-mXB" secondAttribute="bottom" constant="39" id="jLk-KF-VmM"/>
+                            <constraint firstItem="MLV-KW-DWM" firstAttribute="trailing" secondItem="3mn-KH-cQ9" secondAttribute="trailing" id="lz3-pk-L8T"/>
+                            <constraint firstItem="MLV-KW-DWM" firstAttribute="leading" secondItem="VfS-NM-mXB" secondAttribute="leading" id="mLD-eb-zHR"/>
+                            <constraint firstItem="VfS-NM-mXB" firstAttribute="trailing" secondItem="FOL-ho-Rf6" secondAttribute="trailing" id="qNs-vq-pkr"/>
+                            <constraint firstItem="MLV-KW-DWM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="te2-3Q-O3Q"/>
+                            <constraint firstItem="3mn-KH-cQ9" firstAttribute="leading" secondItem="MLV-KW-DWM" secondAttribute="leading" id="zsm-bW-o28"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+</document>
