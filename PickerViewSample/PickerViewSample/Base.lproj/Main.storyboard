@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PickerViewSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fF5-FP-xE1">
+                                <rect key="frame" x="279" y="312" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="FLq-jz-KCJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aS0-j3-nmN">
+                                <rect key="frame" x="277" y="398" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="onClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rN4-Yd-eA8"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="luB-aO-t3s">
+                                <rect key="frame" x="0.0" y="28" width="600" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="BFB-8l-pHN"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Gnh-lW-UsY"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="luB-aO-t3s" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3cA-0R-l8b"/>
+                            <constraint firstItem="fF5-FP-xE1" firstAttribute="centerX" secondItem="luB-aO-t3s" secondAttribute="centerX" id="FgG-yQ-M6E"/>
+                            <constraint firstItem="fF5-FP-xE1" firstAttribute="top" secondItem="luB-aO-t3s" secondAttribute="bottom" constant="68" id="GCo-6m-Avx"/>
+                            <constraint firstItem="luB-aO-t3s" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="OtY-Tu-jGd"/>
+                            <constraint firstAttribute="trailing" secondItem="luB-aO-t3s" secondAttribute="trailing" id="Qug-V5-UxI"/>
+                            <constraint firstItem="aS0-j3-nmN" firstAttribute="centerX" secondItem="fF5-FP-xE1" secondAttribute="centerX" id="f42-wN-TQE"/>
+                            <constraint firstItem="aS0-j3-nmN" firstAttribute="top" secondItem="fF5-FP-xE1" secondAttribute="bottom" constant="65" id="gUb-Yo-tL9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="fF5-FP-xE1" id="3FS-Jx-fIm"/>
+                        <outlet property="pickerView" destination="luB-aO-t3s" id="zyg-aQ-fUH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

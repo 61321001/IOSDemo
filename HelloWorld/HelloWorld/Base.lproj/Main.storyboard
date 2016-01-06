@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,18 +21,25 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HelloWorld" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rGL-Dc-yDZ">
                                 <rect key="frame" x="258" y="128" width="84" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="8yR-PI-UEk"/>
+                                    <constraint firstAttribute="width" constant="84" id="IoP-7f-Gfh"/>
+                                    <constraint firstAttribute="height" constant="21" id="sMX-9X-nbx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="prZ-5A-R6t">
+                                <rect key="frame" x="20" y="171" width="560" height="409"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rGL-Dc-yDZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="108" id="KEk-K4-DyC"/>
-                            <constraint firstItem="rGL-Dc-yDZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vrs-fJ-rp5"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rGL-Dc-yDZ" secondAttribute="bottom" constant="451" id="kNp-rs-71j"/>
+                            <constraint firstAttribute="bottom" secondItem="prZ-5A-R6t" secondAttribute="bottom" constant="20" symbolic="YES" id="6Mk-jn-UeC"/>
+                            <constraint firstItem="rGL-Dc-yDZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="108" id="JgB-W2-Toh"/>
+                            <constraint firstItem="rGL-Dc-yDZ" firstAttribute="centerX" secondItem="prZ-5A-R6t" secondAttribute="centerX" id="NF3-Kf-ffa"/>
+                            <constraint firstItem="prZ-5A-R6t" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cBO-30-3Vr"/>
+                            <constraint firstItem="prZ-5A-R6t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rsk-zD-MS1"/>
+                            <constraint firstItem="prZ-5A-R6t" firstAttribute="top" secondItem="rGL-Dc-yDZ" secondAttribute="bottom" constant="22" id="x6Z-0d-wTc"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -40,4 +48,7 @@
             <point key="canvasLocation" x="305" y="215"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background" width="960" height="853"/>
+    </resources>
 </document>
